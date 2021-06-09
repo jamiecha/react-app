@@ -4,6 +4,14 @@ module.exports = {
   plugins: [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@semantic-release/github", // Create a github release
+    [
+      "@semantic-release/github",
+      {
+        assets: [
+          { path: "build.zip", label: "Build" },
+          { path: "coverage.zip", label: "Coverage" },
+        ],
+      },
+    ], // Create a github release
   ],
 };
