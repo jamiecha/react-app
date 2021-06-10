@@ -632,7 +632,7 @@ try {
     const time = new Date()
     core.setOutput("time", time.toTimeString())
 
-    core.startGropu('Logging github object')
+    core.startGroup('Logging github object')
     console.log(JSON.stringify(github, null, '\t'))
     core.endGroup()
 
