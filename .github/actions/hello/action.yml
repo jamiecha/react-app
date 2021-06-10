@@ -1,0 +1,14 @@
+name: Hello World
+author: Jamie Cha
+description: Private Action
+inputs:
+  who-to-greet:
+    description: 'Who to Greet'
+    required: true
+    default: Jamie
+outputs:
+  time:
+    description: 'The greeting time'
+runs:
+  using: node12
+  main: "dist/index.js"
